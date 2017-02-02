@@ -1,0 +1,19 @@
+{
+  "name": "new-to-do-app",
+  "version": "1.0.0",
+  "description": "A better to do app with new code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TerrellLinnell/NewImprovedToDo.git"
+  },
+  "author": "Pony Linnell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TerrellLinnell/NewImprovedToDo/issues"
+  },
+  "homepage": "https://github.com/TerrellLinnell/NewImprovedToDo#readme"
+}
