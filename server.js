@@ -1,6 +1,6 @@
-var express = require('express');
-var app = express();
-var toDos = require('./models/toDos');
+var express = require('express');//requires express package
+var app = express();//starts express server
+var toDos = require('./models/toDos');//requires file models.todo
 var mongoose = require('mongoose');
 var toDoRoutes = require('./routes/toDoRoutes');
 var bodyParser = require('body-parser');
