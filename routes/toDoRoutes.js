@@ -4,17 +4,28 @@ var ToDo = require('../models/toDos');
 
 router.route('/')
   .get(function(req, res){
-    Todo.find(function(err, data) {
+    ToDo.find(function(err, data) {
       if (err) {
       console.log("error finding todos");
       } else{
         res.json(data);
       }
     })
-    res.json({message: 'Its working'})
   })
 
-
+  .post(function (req, res){
+    var toDo = new ToDo({
+      name: req.body.name,
+      date: req.body.date,
+  })
+  toDo.save(function (err, toDoData) {
+    if (err) {
+    console.log("error finding todos");
+    } else{
+      res.json(toDoData);
+    }
+  })
+})
 
 // router.route('/api')
 // app.get('/api/toDos',function(req, res){

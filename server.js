@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost/Todos");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/api/todos', toDoRoutes);
+app.use('/api/toDos', toDoRoutes);
 
 
 
