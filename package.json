@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/TerrellLinnell/NewImprovedToDo/issues"
   },
-  "homepage": "https://github.com/TerrellLinnell/NewImprovedToDo#readme"
+  "homepage": "https://github.com/TerrellLinnell/NewImprovedToDo#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "moment": "^2.17.1",
+    "mongoose": "^4.8.1"
+  }
 }
