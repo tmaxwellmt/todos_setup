@@ -5,3 +5,5 @@ var ToDoSchema = new Schema({
   name: String,
   date: Number,
 });
+
+module.exports = mongoose.model("Todos", ToDoSchema);

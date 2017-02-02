@@ -1,12 +1,19 @@
 var express = require('express');
-
-
 var router = new express.Router();
+var ToDo = require('../models/toDos');
 
 router.route('/')
   .get(function(req, res){
+    Todo.find(function(err, data) {
+      if (err) {
+      console.log("error finding todos");
+      } else{
+        res.json(data);
+      }
+    })
     res.json({message: 'Its working'})
   })
+
 
 
 // router.route('/api')
