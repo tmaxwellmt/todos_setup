@@ -17,6 +17,7 @@ router.route('/')
     var toDo = new ToDo({ // states how we are making todos
       name: req.body.name,
       date: req.body.date,
+      status: req.body.status,
   })
 
   toDo.save(function (err, toDoData) {//saves todo to database
@@ -46,9 +47,9 @@ router.route('/')
         } else {
         toDoData.name = req.body.name ? req.body.name : toDoData.name; //type new name if new name is old name  keep old name if not update it to the new name
         toDoData.date = req.body.date ? req.body.date : toDoData.date;// same above with date, like if else statement
-
-        toDoData.save(function (e, updatedToDo) { //saves new updated todo to database
-          if (e) {
+        toDoData.status = req.body.status ? req.body.status : toDoData.status;
+        toDoData.save(function (err, updatedToDo) { //saves new updated todo to database
+          if (err) {
               console.log("error with updated todo");
           } else {
               res.json(updatedToDo);
