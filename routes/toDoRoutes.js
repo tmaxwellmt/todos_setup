@@ -18,15 +18,15 @@ router.route('/')
       name: req.body.name, //body object
       date: req.body.date,
       status: req.body.status,
-  })
+    })
 
-  toDo.save(function (err, toDoData) {//saves todo to database
-    if (err) {
-      console.log("error finding todos");
+    toDo.save(function (err, toDoData) {//saves todo to database
+      if (err) {
+        console.log("error finding todos");
       } else{
         res.json(toDoData);
       }
-    })
+    });
   });
 //creates a new route at /api/toDos/23423423445 specific todo id
   router.route('/:todo_id')
@@ -46,8 +46,8 @@ router.route('/')
           console.log("error finding a specific todo");
         } else {
         toDoData.name = req.body.name ? req.body.name : toDoData.name; //type new name if new name is old name  keep old name if not update it to the new name
-        toDoData.date = req.body.date ? req.body.date : toDoData.date;// same above with date, like if else statement
-        toDoData.status = req.body.status ? req.body.status : toDoData.status; //wholething is a turnarry
+        toDoData.date = req.body.date ? req.body.date : toDoData.date;// same above with date,
+        toDoData.status = req.body.status ? req.body.status : toDoData.status; //wholething is a turnarry, like if else statement
         toDoData.save(function (err, updatedToDo) { //saves new updated todo to database
           if (err) {
               console.log("error with updated todo");

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shit I Should do</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class= "jumbotron">
+        <h2>Get your shit done</h2>
+      </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ToDo</th>
+              <th>Date</th>
+              <th>Staus</th>
+          </thead>
+          <tbody>
+            <% for(var i=0; i< todos.length; i++) {%>
+              <tr>
+                <td><%= todos.name %></td>
+                <td><%= todos.date %></td>
+                <td><%= todos.status %></td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
