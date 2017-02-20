@@ -39,18 +39,14 @@
       <tbody>
         <% for (var i = 0; i<todos.length; i++) { %>
           <tr>
-            <td><%= todos.name %></td>
-            <td><%= todos.date %></td>
-            <td><%= todos.status %></td>
-            <td><button id="<%= todos[i]._id %>" class="btn btn-primary delete-btn">Delete</button></td>
-            <td><button id="<%= bears[i]._id %>" class="btn btn-primary update">Update</button></td>
-          </tr>
+            <td><%= todos[i].name %></td>
+            <td><%= todos[i].date %></td>
+            <td><%= todos[i].status %></td>
           <% } %>
         </tbody>
       </tabl>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/server.js"></script>
   </body>
 </html>
