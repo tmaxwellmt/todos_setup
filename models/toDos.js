@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Bear = require('../models/toDos');
+
 
 var Schema = mongoose.Schema;
 

@@ -9,6 +9,8 @@ mongoose.connect("mongodb://localhost/Todos"); //connects mongoose to mongodb
 
 app.set('view engine', 'ejs')
 
+app.use(express.static('public'));
+
 app.use(bodyParser.json());//needed to read req.body
 app.use(bodyParser.urlencoded({extended: true}));//needed
 
@@ -20,7 +22,7 @@ app.get("/example", function(req, res) {
     if (err){
       console.log(err);
     }else {
-      res.render('index', {welcome: "Hello World", todos: toDos })
+      res.render('index', {welcome: "Hello World", todos: toDos })//gives back ejs page
     }
   })
 });
