@@ -8,46 +8,53 @@
   </head>
   <body>
     <div class="container">
-      <div class= "jumbotron">
+      <div class= "page-header">
+        <h1>My lists of tasks for the Week <small>Get Your ass in gear</small></h1>
         <h2><%= welcome %></h2>
       </div>
       <div class="container">
-        <form id="newTodo" class="table table-striped">
-          <div class="form-group">
-            <label for="exampleInputName2">To Do</label>
-            <input id="name" type="text" class="form-control" name="name" placeholder="todo name">
-          </div>
-        <div class="form-group">
-          <label for="exampleInputName2">Date</label>
-          <input id="Date" type="text" class="form-control" date="date" placeholder="Date">
+        <div class="row">
+          <div class="col-xs-8">
+            <form id="newTodo" class="table table-striped">
+              <div class="form-group">
+                <label for="exampleInputName2">What do I have to do</label>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Current Chore">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputName2">Date</label>
+              <input id="date" type="text" class="form-control" date="date" placeholder="Date">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputName2">Status</label>
+              <input id="status" type="text" class="form-control" status="status" placeholder="status">
+            </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Add a Todo</button>
+              <button id="update_todo" type="update" class="btn btn-default btn-lg btn-block">Update Todo</button>
+            </div>
+          </form>
+       <div class="col-xs-12">
+         <table class="table table-striped">
+            <h3>My done ToDo List</h3>
+            <thead>
+               <tr>
+                 <th><strong>NAME</strong></th>
+                 <th><strong>DATE</strong></th>
+                 <th><strong>STATUS</strong></th>
+              </tr>
+          </thead>
+          <tbody>
+            <% for (var i = 0; i<todos.length; i++) { %>
+              <tr>
+                <td><%= todos[i].name %></td>
+                <td><%= todos[i].date %></td>
+                <td><%= todos[i].status %></td>
+                <td><button id="<%= todos[i]._id %>" class="btn btn-primary delete-btn">Delete</button></td>
+              <% } %>
+            </tbody>
+          </tabl>
         </div>
-        <div class="form-group">
-          <label for="exampleInputName2">Status</label>
-          <input id="status" type="text" class="form-control" status="status" placeholder="status">
-        </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Add a Todo</button>
-          <button id="update_todo" type="update" class="btn btn-default btn-lg btn-block">Update Todo</button>
-        </div>
-    </form>
-      <table class="table table-hover">
-        <thead>
-           <tr>
-             <th><strong>Name</strong></th>
-             <th><strong>date</strong></th>
-             <th><strong>Status</strong></th>
-          </tr>
-      </thead>
-      <tbody>
-        <% for (var i = 0; i<todos.length; i++) { %>
-          <tr>
-            <td><%= todos[i].name %></td>
-            <td><%= todos[i].date %></td>
-            <td><%= todos[i].status %></td>
-          <% } %>
-        </tbody>
-      </tabl>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
   </body>
 </html>
