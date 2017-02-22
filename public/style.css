@@ -1,30 +1,42 @@
-body{background-color: tan}
+
 
 body{
-  background-image: url("http://www.photovaco.com/wp-content/uploads/2011/09/free-photo-free-texture-979.jpg");
+  background-image: url("http://www.freetexturesdownload.com/download/Wood-Free-Textures-14774.jpg");
 }
-jumbotron{
-  background-color:#21665f;
-}
-.top-row{
-  background-color: tan;
+
+.container2{
+  background: white linear-gradient(to bottom, white, #e3dfdc 50%, White) no-repeat 99% center;
   padding-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 20px;
-  opacity: 50%;
+  opacity: 10%;
 }
 #todo-list  {
   color:#f1071c ;
 }
-.todo-list{
-  background-color: tan;
+.container{
+  background: Black linear-gradient(to bottom, black, #e3dfdc 50%, black) no-repeat 99% center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  opacity: 10%;
 }
-.exampleInputName2{
-  color: white;
+h1 {
+  color: rgb(58, 161, 252);
+  text-transform: capitalize;
+  font-family: Arial, sans-serif;
 }
-.left-column{
-  background-color: white;
+h3 {
+  color: rgb(187, 187, 186);
+  text-transform: capitalize;
+  font-family: georgia, serif;
 }
+h4 {
+  color: rgb(187, 187, 186);
+  text-transform: capitalize;
+  font-family: Arial, sans-serif;
+}
+
 .middle-column{
   background-color: red;
 }
