@@ -26,15 +26,21 @@ h1 {
   text-transform: capitalize;
   font-family: Arial, sans-serif;
 }
+h2 {
+  color: rgb(55, 158, 249);
+  text-transform: capitalize;
+  font-family: Impact, sans-serif;
+}
+
 h3 {
-  color: rgb(187, 187, 186);
+  color: rgb(240, 240, 237);
   text-transform: capitalize;
   font-family: georgia, serif;
 }
 h4 {
-  color: rgb(187, 187, 186);
+  color: rgb(46, 119, 53);
   text-transform: capitalize;
-  font-family: Arial, sans-serif;
+  font-family: Impact, sans-serif;
 }
 
 .middle-column{
